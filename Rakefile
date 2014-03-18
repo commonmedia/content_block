@@ -7,3 +7,9 @@ task :console do
   ARGV.clear
   IRB.start
 end
+
+task :travis do
+  system('bundle exec rspec')
+end
+
+task default: :travis
