@@ -1,5 +1,9 @@
 # ContentBlock
 
+[![Build Status](https://travis-ci.org/commonmedia/content_block.png)](https://travis-ci.org/commonmedia/content_block)
+[![Coverage Status](https://coveralls.io/repos/commonmedia/content_block/badge.png)](https://coveralls.io/r/commonmedia/content_block)
+[![Code Climate](https://codeclimate.com/github/commonmedia/content_block.png)](https://codeclimate.com/github/commonmedia/content_block)
+
 TODO: Write a gem description
 
 ## Installation
