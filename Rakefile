@@ -1,4 +1,6 @@
 require 'bundler/gem_tasks'
+require 'rake'
+require 'rspec/core/rake_task'
 
 task :console do
   require 'irb'
