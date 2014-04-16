@@ -1,3 +1,4 @@
+require 'content_block/railtie' if defined?(Rails::Railtie)
 require 'content_block/version'
 
 begin
@@ -6,5 +7,4 @@ rescue LoadError
 end
 
 module ContentBlock
-  # Your code goes here...
 end
