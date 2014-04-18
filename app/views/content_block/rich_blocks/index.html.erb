@@ -1,0 +1,29 @@
+<h1>Listing rich_blocks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rich_blocks.each do |rich_block| %>
+      <tr>
+        <td><%= rich_block.name %></td>
+        <td><%= rich_block.title %></td>
+        <td><%= rich_block.content %></td>
+        <td><%= link_to 'Show', rich_block %></td>
+        <td><%= link_to 'Edit', content_block.edit_rich_block_path(rich_block) %></td>
+        <td><%= link_to 'Destroy', rich_block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rich block', content_block.new_rich_block_path %>

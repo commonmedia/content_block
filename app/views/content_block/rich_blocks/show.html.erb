@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rich_block.name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @rich_block.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @rich_block.content %>
+</p>
+
+<%= link_to 'Edit', content_block.edit_rich_block_path(@rich_block) %> |
+<%= link_to 'Back', content_block.rich_blocks_path %>

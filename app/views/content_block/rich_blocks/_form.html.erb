@@ -1,0 +1,29 @@
+<%= form_for(@rich_block) do |f| %>
+  <% if @rich_block.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rich_block.errors.count, "error") %> prohibited this rich_block from being saved:</h2>
+
+      <ul>
+      <% @rich_block.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
