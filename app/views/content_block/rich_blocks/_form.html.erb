@@ -1,4 +1,4 @@
-<%= form_for(@rich_block) do |f| %>
+<%= form_for(@rich_block, url: [content_block, @rich_block]) do |f| %>
   <% if @rich_block.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@rich_block.errors.count, "error") %> prohibited this rich_block from being saved:</h2>
