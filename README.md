@@ -13,13 +13,18 @@ Add this line to your application's Gemfile:
 
     gem 'content_block'
 
-And then execute:
+Have bundler install the gem:
 
-    $ bundle
+    bundle
 
-Or install it yourself as:
+Copy over the migrations:
 
-    $ gem install content_block
+    rake content_block:install:migrations
+
+Run the migrations:
+
+    rake db:migrate
+
 
 ## Usage
 
