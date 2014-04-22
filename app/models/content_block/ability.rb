@@ -5,7 +5,7 @@ module ContentBlock
     def initialize(user)
       user ||= User.new
 
-      can :manage, :all if user.role == 'admin'
+      can :manage, ContentBlock::RichBlock if user.role == 'admin'
     end
   end
 end

@@ -3,7 +3,7 @@ require_dependency 'content_block/application_controller'
 module ContentBlock
   class RichBlocksController < ContentBlock::ApplicationController
     before_action :set_rich_block, only: [:show, :edit, :update, :destroy]
-    authorize_resource
+    authorize_resource class: ContentBlock::RichBlock
 
     # GET /content-block/rich-blocks
     def index
