@@ -131,5 +131,12 @@ module ContentBlock
       end
     end
 
+    describe 'rescue_from exceptions' do
+      it 'rescues from CanCan::AccessDenied' do
+        controller.stub(:authorize!) { raise CanCan::AccessDenied }
+        get :index
+        response.should redirect_to('/users/sign_in')
+      end
+    end
   end
 end
