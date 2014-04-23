@@ -2,15 +2,13 @@ require 'spec_helper'
 
 describe 'rich_blocks/new' do
   before(:each) do
-    assign(:rich_block, stub_model(ContentBlock::RichBlock,
-      name: 'MyString',
-      title: 'MyString',
-      content: 'MyString'
-    ).as_new_record)
+    assign(:rich_block, stub_model(ContentBlock::RichBlock, name: 'MyString',
+                                                            title: 'MyString',
+                                                            content: 'MyString').as_new_record)
   end
 
   it 'renders new rich_block form' do
-    render template: 'content_block/rich_blocks/new', layout: 'layouts/content_block/application'
+    render template: 'content_block/rich_blocks/new'
 
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select 'form[action=?][method=?]', content_block.rich_blocks_path, 'post' do
