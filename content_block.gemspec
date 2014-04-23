@@ -19,6 +19,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '~> 4.0'
   s.add_dependency 'cancancan', '~> 1.7'
+  s.add_dependency 'ckeditor', '~> 4.0'
+  s.add_dependency 'simple_form', '~> 3.0'
 
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'coveralls'
