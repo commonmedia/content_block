@@ -3,7 +3,7 @@ class CreateContentBlockRichBlocks < ActiveRecord::Migration
     create_table :content_block_rich_blocks do |t|
       t.string :name
       t.string :title
-      t.string :content
+      t.text :content
 
       t.timestamps
     end
