@@ -28,7 +28,7 @@ module ContentBlock
       @rich_block = RichBlock.new(rich_block_params)
 
       if @rich_block.save
-        redirect_to @rich_block, notice: 'Rich block was successfully created.'
+        redirect_to @rich_block, notice: 'RichBlock was successfully created.'
       else
         render :new
       end
@@ -37,7 +37,7 @@ module ContentBlock
     # PATCH/PUT /content-block/rich-blocks/1
     def update
       if @rich_block.update(rich_block_params)
-        redirect_to @rich_block, notice: 'Rich block was successfully updated.'
+        redirect_to @rich_block, notice: 'RichBlock was successfully updated.'
       else
         render :edit
       end
@@ -46,7 +46,7 @@ module ContentBlock
     # DELETE /content-block/rich-blocks/1
     def destroy
       @rich_block.destroy
-      redirect_to rich_blocks_url, notice: 'Rich block was successfully destroyed.'
+      redirect_to rich_blocks_url, notice: 'RichBlock was successfully destroyed.'
     end
 
     private

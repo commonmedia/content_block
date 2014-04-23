@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>ID:</strong>
+  <%= @rich_block.id %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @rich_block.name %>
 </p>
@@ -16,4 +21,4 @@
 </p>
 
 <%= link_to 'Edit', content_block.edit_rich_block_path(@rich_block) %> |
-<%= link_to 'Back', content_block.rich_blocks_path %>
+<%= link_to 'RichBlocks', content_block.rich_blocks_path %>
