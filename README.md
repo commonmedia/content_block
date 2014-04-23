@@ -20,22 +20,12 @@ Have bundler install the gem:
 
     bundle
 
-Copy over the migrations:
+Run the installer:
 
-    rake content_block:install:migrations
+    rails generate content_block:install
 
-Run the migrations:
-
-    rake db:migrate
-
-Add these lines to your `ApplicationController` file:
-
-    helper ContentBlock::Engine.helpers
-
-    def content_block_user
-      current_user
-    end
-    helper_method :content_block_user
+Get a functional ckeditor working.
+Go read about that at [here](https://github.com/galetahub/ckeditor#ckeditor)
 
 
 ## Usage
