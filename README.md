@@ -5,7 +5,10 @@
 [![Code Climate](https://codeclimate.com/github/commonmedia/content_block.png)](https://codeclimate.com/github/commonmedia/content_block)
 [![GitHub version](https://badge.fury.io/gh/commonmedia%2Fcontent_block.png)](http://badge.fury.io/gh/commonmedia%2Fcontent_block)
 
-TODO: Write a gem description
+A block, as used within this gem, is a section of content (either an image, simple text, or rich text that includes markup).
+This gem allows you to create these different types of blocks, and place them throughout the site.
+You can then give the administrative users of the site access to edit these blocks.
+
 
 ## Installation
 
@@ -25,10 +28,22 @@ Run the migrations:
 
     rake db:migrate
 
+Add these lines to your `ApplicationController` file:
+
+    helper ContentBlock::Engine.helpers
+
+    def content_block_user
+      current_user
+    end
+    helper_method :content_block_user
+
 
 ## Usage
 
-Develop content blocks system.
+You can manage the blocks by visiting the `/content-block/admin` URL as an admin. That page links out to each block-type's simple CRUD interface.
+
+To use the blocks in your views, simply call `rich_block('BLOCKNAME')` or `rich_block_with_title('BLOCKNAME')` wherever you'd like the block placed (and whether you'd like the title included or not).
+
 
 ## Contributing
 
