@@ -1,12 +1,12 @@
 module ContentBlock
   module BlockHelper
-    def rich_block(name)
-      block = ContentBlock::RichBlock.find_by_name(name)
-      block.content
+    def rich_block(find_by)
+      block = ContentBlock::RichBlock.where('id = ? OR name = ?', find_by, find_by).first
+      block.content.html_safe
     end
 
-    def rich_block_with_title(name, wrapper)
-      block         = ContentBlock::RichBlock.find_by_name(name)
+    def rich_block_with_title(find_by, wrapper)
+      block         = ContentBlock::RichBlock.where('id = ? OR name = ?', find_by, find_by).first
       wrapped_title = "<#{wrapper}>#{block.title}</#{wrapper}>"
       "#{wrapped_title}#{block.content}".html_safe
     end
