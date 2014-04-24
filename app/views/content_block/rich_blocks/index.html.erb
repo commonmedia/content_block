@@ -1,8 +1,14 @@
 <h1>Listing RichBlocks</h1>
 
+<p>
+  <%= link_to 'ContentBlock Admin', content_block.content_block_admin_path %> |
+  <%= link_to 'New RichBlock', content_block.new_rich_block_path %>
+</p>
+
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Title</th>
       <th>Content</th>
@@ -13,6 +19,7 @@
   <tbody>
     <% @rich_blocks.each do |rich_block| %>
       <tr>
+        <td><%= rich_block.id %></td>
         <td><%= rich_block.name %></td>
         <td><%= rich_block.title %></td>
         <td><%= ActionView::Base.full_sanitizer.sanitize(rich_block.content)[0..50] %>...</td>
@@ -23,8 +30,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'ContentBlock Admin', content_block.content_block_admin_path %> |
-<%= link_to 'New RichBlock', content_block.new_rich_block_path %>

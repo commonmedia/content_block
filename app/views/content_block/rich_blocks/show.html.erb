@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
+<p>
+  <%= link_to 'Edit', content_block.edit_rich_block_path(@rich_block) %> |
+  <%= link_to 'RichBlocks Admin', content_block.rich_blocks_path %>
+</p>
 
 <p>
   <strong>ID:</strong>
@@ -19,6 +22,3 @@
   <strong>Content:</strong><br />
   <%= @rich_block.content.html_safe %>
 </p>
-
-<%= link_to 'Edit', content_block.edit_rich_block_path(@rich_block) %> |
-<%= link_to 'RichBlocks', content_block.rich_blocks_path %>
