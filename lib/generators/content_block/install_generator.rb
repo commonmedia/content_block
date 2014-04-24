@@ -4,6 +4,7 @@ module ContentBlock
   module Generators
     class InstallGenerator < ::Rails::Generators::Base
       source_root File.expand_path('../templates', __FILE__)
+      source_root File.expand_path('../../../../config/initializers', __FILE__)
 
       desc "Installs ContentBlock:\n
         * Mounts routes\n
@@ -19,7 +20,6 @@ module ContentBlock
       end
 
       def add_to_application_controller
-        # inject_into_file 'app/controllers/application_controller.rb', after: "protect_from_forgery with: :exception\n"  do <<-RUBY
         inject_into_file 'app/controllers/application_controller.rb', after: "class ApplicationController < ActionController::Base\n"  do <<-RUBY
 
   helper ContentBlock::Engine.helpers
@@ -34,12 +34,12 @@ module ContentBlock
       end
 
       def run_migrations
-        rake "content_block:install:migrations"
-        rake "db:migrate"
+        rake 'content_block:install:migrations'
+        rake 'db:migrate'
       end
 
-      def copy_templates
-        copy_file "config/initializers/ckeditor.rb"
+      def copy_ckeditor_initializer
+        copy_file 'ckeditor.rb', "config/initializers/ckeditor.rb"
       end
     end
   end
