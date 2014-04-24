@@ -9,11 +9,5 @@ module ContentBlock
       g.assets false
       g.helper false
     end
-
-    # initializer 'content_block.action_controller' do |app|
-    #   ActiveSupport.on_load :action_controller do
-    #     helper ContentBlock::ApplicationHelper
-    #   end
-    # end
   end
 end
