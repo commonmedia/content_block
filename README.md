@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/commonmedia/content_block.png)](https://travis-ci.org/commonmedia/content_block)
 [![Coverage Status](https://coveralls.io/repos/commonmedia/content_block/badge.png)](https://coveralls.io/r/commonmedia/content_block)
 [![Code Climate](https://codeclimate.com/github/commonmedia/content_block.png)](https://codeclimate.com/github/commonmedia/content_block)
+[![Dependency Status](https://gemnasium.com/commonmedia/content_block.svg)](https://gemnasium.com/commonmedia/content_block)
 [![Gem Version](https://badge.fury.io/rb/content_block.svg)](http://badge.fury.io/rb/content_block)
 
 A block, as used within this gem, is a section of content (either an image, simple text, or rich text that includes markup).
