@@ -50,11 +50,14 @@ To use a block in your view without displaying its title
 
     <%= rich_block('IDENTIFIER') %>
 
+For example, if a block has an `id` of '1' and a `name` of 'content page', it can be displayed with either `<%= rich_block(1) %>` or `<%= rich_block('content page') %>`.
+
 To use a block in your view and display its title
 (`IDENTIFIER` is either the `name` or the `id` of the block to be displayed & `TAG` is the HTML tag you'd like the title to be wrapped in):
 
     <%= rich_block_with_title('IDENTIFIER', 'TAG') %>
 
+For example, if a block has an `id` of '1' and you want to display its title in an `<h4>` tag, then it would be displayed with `<%= rich_block_with_title(1, 'h4') %>`.
 
 ## Contributing
 
