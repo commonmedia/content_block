@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    content_block (0.0.2)
+    content_block (0.0.3)
       cancancan (~> 1.7)
       ckeditor (~> 4.0)
       rails (~> 4.0)
