@@ -18,8 +18,8 @@ Gem::Specification.new do |s|
   s.test_files = Dir['spec/**/*']
 
   s.add_dependency 'rails', '>= 4.0.5'
-  s.add_dependency 'cancancan', '~> 1.7'
-  s.add_dependency 'ckeditor', '~> 4.0'
+  s.add_dependency 'cancancan', '~> 1.9'
+  s.add_dependency 'ckeditor', '~> 4.1.0'
   s.add_dependency 'simple_form', '~> 3.0'
 
   s.add_development_dependency 'capybara'
