@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    content_block (0.0.4)
+    content_block (0.0.5)
       cancancan (~> 1.9)
       ckeditor (~> 4.1.0)
       rails (>= 4.0.5)
@@ -142,21 +142,6 @@ GEM
     tins (1.1.0)
     treetop (1.4.15)
       polyglot
-      polyglot
-      polyglot
-      polyglot
-      polyglot
-      polyglot
-      polyglot
-      polyglot
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
       polyglot (>= 0.3.1)
     tzinfo (1.1.0)
       thread_safe (~> 0.1)
